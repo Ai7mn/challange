@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+nav {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+}
+
+.NavbarItems {
+    top: 0;
+}
+
+.NavbarItems {
+    overflow: hidden;
+}
+
+.AppName {
+    float: left;
+    font-size: 30pt;
+    font-weight: bold;
+    font-family: "Poppins";
+    color: rgb(252, 174, 97);
+    line-height: 2;
+}
+
+.AppName span {
+    color: rgb(36, 47, 81) !important;
+}
+
+.NavbarItems ul {
+    float: right;
+}
+
+.NavbarItems ul li {
+    float: left;
+    text-align: center;
+    padding: 6px 16px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.NavbarItems .nav-links {
+    left: 0px;
+    font-size: 16pt;
+    font-weight: bold;
+    font-family: Poppins;
+    color: rgb(36, 47, 81);
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+.NavbarItems .try-link {
+    left: 0px;
+    color: #FFFFFF;
+    background-color: rgb(37, 0, 249);
+    text-align: center;
+    margin-left: 5px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-family: Poppins;
+    padding: 11px 15px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.NavbarItems ul li:hover {
+    background-color: rgb(252, 174, 97);
+    color: black;
+}
+
+.NavbarItems ul li.active {
+    background-color: rgb(252, 174, 97);
+    color: white;
+}

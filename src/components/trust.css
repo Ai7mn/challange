@@ -1,0 +1,17 @@
+.companies {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 100px;
+    left: 220px;
+}
+
+.companies .trust-images {
+    top: 0;
+    padding: 0px 20px;
+}
+
+.companies .trust-images img {
+    padding: 0px 20px;
+    height: 54px;
+}

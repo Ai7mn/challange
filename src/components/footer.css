@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+footer {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+}
+
+.FooterItems {
+    overflow: hidden;
+}
+
+.FooterItems .AppName {
+    font-size: 30pt;
+    font-weight: bold;
+    font-family: "Poppins";
+    color: rgb(252, 174, 97);
+    line-height: 2;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+.FooterItems .AppName span {
+    color: white !important;
+}
+
+.FooterItems ul {
+    margin: 20px 23%;
+    width: 80%;
+}
+
+.FooterItems ul li {
+    float: left;
+    text-align: center;
+    padding: 6px 16px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.FooterItems .nav-links {
+    left: 0px;
+    font-size: 16pt;
+    font-weight: bold;
+    font-family: Poppins;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+.FooterItems ul li:hover {
+    background-color: rgb(252, 174, 97);
+    color: white;
+}
+
+.FooterItems ul li.active {
+    background-color: rgb(252, 174, 97);
+    color: white;
+}

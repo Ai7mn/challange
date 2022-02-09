@@ -1,0 +1,58 @@
+.jackpots-list {
+    position: absolute;
+    text-align: left;
+    display: flex;
+    top: 300px;
+}
+
+.texts-section {
+    top: 120px;
+    position: absolute;
+}
+
+.jackpot {
+    width: 423px;
+    display: flex;
+}
+
+.jackpot .title {
+    width: 294px;
+    font-size: 20px;
+    position: unset !important;
+    font-family: "Poppins";
+    font-weight: bold;
+    line-height: 2.9;
+    /* position: absolute;
+    left: 902.87px; */
+    z-index: 71;
+    margin: 0 30px;
+}
+
+.jackpot .describtion {
+    float: right;
+    font-size: 16px;
+    width: 294px;
+    font-family: "Poppins";
+    color: rgb(97, 99, 104);
+    line-height: 1.625;
+    position: unset !important;
+    /* position: absolute;
+    left: 902.002px; */
+    top: 1760.546px;
+    z-index: 72;
+    margin: 0 30px;
+}
+
+.jackpot .ellipse {
+    margin-left: 30px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding: 15px;
+    z-index: 73;
+}
+
+.jackpot .ellipse img {
+    margin-top: 6px;
+    margin-left: 6px;
+}
