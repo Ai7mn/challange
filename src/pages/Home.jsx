@@ -80,7 +80,7 @@ function Home() {
             <a
               href="https://play.google.com/store"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="Open Google Play"
             >
               <img src={googlePlay} alt="Get it on Google Play" />
@@ -88,7 +88,7 @@ function Home() {
             <a
               href="https://www.apple.com/app-store/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="Open the App Store"
             >
               <img src={appStore} alt="Download on the App Store" />
