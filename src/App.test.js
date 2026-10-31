@@ -24,12 +24,13 @@ test("renders the landing page and primary navigation", () => {
   ).toHaveAttribute("href", "/features");
 });
 
-test("keeps legacy feature URLs working", async () => {
+test("keeps legacy feature URLs working", () => {
   window.history.pushState({}, "", "/Featurs");
 
   render(<App />);
 
+  expect(window.location.pathname).toBe("/features");
   expect(
-    await screen.findByRole("heading", { name: /product features/i })
+    screen.getByRole("heading", { name: /product features/i })
   ).toBeInTheDocument();
 });
