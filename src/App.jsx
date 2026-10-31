@@ -1,31 +1,42 @@
-// eslint-disable-next-line no-unused-vars
-// import logo from "./logo.svg";
+import React from "react";
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
+
 import "./App.css";
-import React from 'react';
-import Home  from './pages/Home';
-import Featurs  from './pages/Featurs';
-import FAQ  from './pages/FAQ';
-import Pricing  from './pages/Pricing';
-import Testminials  from './pages/Testminials';
-import NavBar from "./components/navbar";
-import { BrowserRouter as Router, Routes ,Route ,Navigate  } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
-const App = () =>{
+import Navbar from "./components/Navbar";
+import FAQ from "./pages/FAQ";
+import FeaturesPage from "./pages/FeaturesPage";
+import Home from "./pages/Home";
+import Pricing from "./pages/Pricing";
+import Testimonials from "./pages/Testimonials";
+
+function App() {
   return (
-   
-      <Router>
-         <div className="App">
-    <NavBar />
-      <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route exact path="/Featurs" element={<Featurs/>} />
-        <Route exact path="/FAQ" element={<FAQ/>} />
-        <Route exact path="/Pricing" element={<Pricing/>} />
-        <Route exact path="/Testminials" element={<Testminials/>} />
-      </Routes >
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/faq" element={<FAQ />} />
+
+          {/* Preserve links from the original implementation. */}
+          <Route path="/Featurs" element={<Navigate replace to="/features" />} />
+          <Route
+            path="/Testminials"
+            element={<Navigate replace to="/testimonials" />}
+          />
+
+          <Route path="*" element={<Navigate replace to="/" />} />
+        </Routes>
       </div>
-    </Router>
-    
+    </BrowserRouter>
   );
 }
 

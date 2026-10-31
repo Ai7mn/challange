@@ -1,23 +1,18 @@
-import React, { Component } from 'react';
-import TrustedList from './TrustedList';
-import './trust.css';
+import React from "react";
 
-class TrustedBy extends Component {
-    render() {
-        return(
-            <div className='companies'>
+import trustedCompanies from "./TrustedList";
+import "./trust.css";
 
-                    {TrustedList.map((item , index) => {
-                        return(
-                            <div  key={item.id} className={item.cName}> <img  src={item.url} alt={"Error displaying company number " + item.id + " Logo"} /></div>
-                        )
-                        
-                    })}
-                
-            </div>
-        )
-     
-    }
+function TrustedBy() {
+  return (
+    <div className="companies">
+      {trustedCompanies.map((company) => (
+        <div key={company.id} className="trust-images">
+          <img src={company.url} alt={company.alt} />
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default TrustedBy;
