@@ -1,96 +1,118 @@
-import React, { Component } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-import "./home.css";
-import tickIcon from "./tick.png";
-import googlePlay from "./google_play.png";
-import appStore from "./app_store.png";
-import TrustedBy from "../components/TrustedBy";
+import Footer from "../components/Footer";
 import Features from "../components/Features";
 import Jackpots from "../components/Jackpots";
-import Footer from "../components/Footer";
-class Home extends Component {
-  render() {
-    return (
-      <>
-        <div className="effects"></div>
+import TrustedBy from "../components/TrustedBy";
+import appStore from "./app_store.png";
+import googlePlay from "./google_play.png";
+import tickIcon from "./tick.png";
+import "./home.css";
 
-        <div className="phone phone-1"></div>
-        <div className="collection-1">
+function Home() {
+  return (
+    <>
+      <div className="effects" aria-hidden="true" />
+      <div className="phone phone-1" aria-hidden="true" />
+
+      <main>
+        <section className="collection-1" aria-labelledby="hero-title">
           <div className="tick-icon">
-            <img src={tickIcon} alt="tick" />
+            <img src={tickIcon} alt="" aria-hidden="true" />
           </div>
           <div className="rectangle">
-            <p> #1 Editiors Choice App of 2020</p>
+            <p>#1 Editor&apos;s Choice App of 2020</p>
           </div>
-          <p className="best-app">Best app for your modern lifestyle</p>
 
+          <h1 id="hero-title" className="best-app">
+            Best app for your modern lifestyle
+          </h1>
           <p className="productivity">
-            Increase productivity with a simple to-do app. app for managing your
-            personal budget.
+            Increase productivity with a simple app for managing everyday
+            priorities and your personal budget.
           </p>
+
           <div className="links">
-            <a href="/#" className="try-btn">
+            <Link to="/pricing" className="try-btn">
               Try for Free
-            </a>
-            <a href="/#" className="demo-link">
-              Watch demo video
+            </Link>
+            <a href="#features" className="demo-link">
+              Explore features
             </a>
           </div>
-        </div>
+        </section>
 
-        <div className="trusted-by">
+        <section className="trusted-by" aria-label="Trusted companies">
           <p>Trusted by companies like</p>
           <TrustedBy />
-        </div>
-        <div className="features-section">
-          <div className="phone-2"></div>
+        </section>
+
+        <section
+          id="features"
+          className="features-section"
+          aria-label="Application features"
+        >
+          <div className="phone-2" aria-hidden="true" />
           <Features />
+
           <div className="jackpots">
-          <h5>Smart jackpots that you may love this anytime {'&'} anywhere</h5>
-                       
-              <hr className="Shape_2" />
-              <p> The rise of mobile devices transforms the way we consume information enirely and world's most elevent channels such as Facebook.</p>
+            <h5>Smart features you can use anytime &amp; anywhere</h5>
+            <hr className="Shape_2" />
+            <p>
+              Mobile experiences have changed how people consume information.
+              AppLab keeps important actions focused and easy to discover.
+            </p>
           </div>
 
-          <Jackpots/>
-        </div>
-       <div className="download-section">
-       <div className="smart-object"></div>
-       <h5>Download our App now !</h5>
-       <p> The rise of mobile devices transforms the way we consume information enirely and world's most elevent channels such as Facebook.</p>
-       <div className="btns-group">
-            <a href="/#" target="_blank" >
-                <img src={googlePlay} alt="" />
+          <Jackpots />
+        </section>
+
+        <section id="download" className="download-section">
+          <div className="smart-object" aria-hidden="true" />
+          <h5>Download our App now!</h5>
+          <p>
+            Take the same focused experience with you and keep your everyday
+            workflow within reach.
+          </p>
+
+          <div className="btns-group">
+            <a
+              href="https://play.google.com/store"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Google Play"
+            >
+              <img src={googlePlay} alt="Get it on Google Play" />
             </a>
-            <a href="/#" target="_blank" >
-            <img src={appStore} alt="" />
+            <a
+              href="https://www.apple.com/app-store/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the App Store"
+            >
+              <img src={appStore} alt="Download on the App Store" />
             </a>
-       </div>
+          </div>
+        </section>
+      </main>
 
-       
-       </div>
-
-        <div className="footer-section">
-
-                <Footer/>
-
-                <div className="Accounts-list">
-                    
-                        <ul>
-                            <li className="icon"></li>
-                            <li className="icon"></li>
-                            <li className="icon"></li>
-                            <li className="icon"></li>
-                        </ul>
-
-                        
-                    </div>
-            <p className="copyright">Copyright © Arifur Rahman Tusha 2019. All right reserved</p>
+      <div className="footer-section">
+        <Footer />
+        <div className="Accounts-list" aria-hidden="true">
+          <ul>
+            <li className="icon" />
+            <li className="icon" />
+            <li className="icon" />
+            <li className="icon" />
+          </ul>
         </div>
-      
-      </>
-    );
-  }
+        <p className="copyright">
+          Original landing-page design credit: Arifur Rahman Tusha, 2019.
+        </p>
+      </div>
+    </>
+  );
 }
 
 export default Home;

@@ -1,38 +1,15 @@
-// eslint-disable-next-line no-unused-vars
-import React, { Component } from 'react';
-import c1 from "./1.png"
-import c2 from "./2.png"
-import c3 from "./3.png"
-import c4 from "./4.png"
-import c5 from "./5.png"
+import companyOne from "./1.png";
+import companyTwo from "./2.png";
+import companyThree from "./3.png";
+import companyFour from "./4.png";
+import companyFive from "./5.png";
 
-// eslint-disable-next-line no-unused-vars
-const TrustedList =[
-    {
-        id:'1',
-        url:c1,
-        cName:'trust-images'
-    },
-    {
-        id:'2',
-        url:c2,
-        cName:'trust-images'
-    },
-    {
-        id:'3',
-        url:c3,
-        cName:'trust-images'
-    },
-    {
-        id:'4',
-        url:c4,
-        cName:'trust-images'
-    },
-    {
-        id:'5',
-        url:c5,
-        cName:'trust-images'
-    },
-]
+const trustedCompanies = [
+  { id: "company-1", url: companyOne, alt: "Trusted company 1" },
+  { id: "company-2", url: companyTwo, alt: "Trusted company 2" },
+  { id: "company-3", url: companyThree, alt: "Trusted company 3" },
+  { id: "company-4", url: companyFour, alt: "Trusted company 4" },
+  { id: "company-5", url: companyFive, alt: "Trusted company 5" },
+];
 
-export default TrustedList
+export default trustedCompanies;

@@ -1,8 +1,36 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen, within } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+beforeEach(() => {
+  window.history.pushState({}, "", "/");
+});
+
+test("renders the landing page and primary navigation", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  const primaryNavigation = screen.getByRole("navigation", {
+    name: /primary navigation/i,
+  });
+
+  expect(primaryNavigation).toBeInTheDocument();
+  expect(
+    screen.getByRole("heading", {
+      name: /best app for your modern lifestyle/i,
+    })
+  ).toBeInTheDocument();
+  expect(
+    within(primaryNavigation).getByRole("link", { name: /key features/i })
+  ).toHaveAttribute("href", "/features");
+});
+
+test("keeps legacy feature URLs working", () => {
+  window.history.pushState({}, "", "/Featurs");
+
+  render(<App />);
+
+  expect(window.location.pathname).toBe("/features");
+  expect(
+    screen.getByRole("heading", { name: /product features/i })
+  ).toBeInTheDocument();
 });

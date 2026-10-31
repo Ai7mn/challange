@@ -1,33 +1,32 @@
-// eslint-disable-next-line no-unused-vars
-import React, { Component } from 'react';
-import f1 from "./bill.png"
-import f2 from "./network.png"
-import f3 from "./badge.png"
+import payoutIcon from "./bill.png";
+import networkIcon from "./network.png";
+import rewardsIcon from "./badge.png";
 
+const jackpots = [
+  {
+    id: "payouts",
+    icon: payoutIcon,
+    title: "Automatic Payouts",
+    description:
+      "Reduce repetitive work with predictable flows for common account actions.",
+    cName: "jackpot f1",
+  },
+  {
+    id: "network",
+    icon: networkIcon,
+    title: "Network Effect",
+    description:
+      "Bring related activity together so users can make informed decisions quickly.",
+    cName: "jackpot f2",
+  },
+  {
+    id: "rewards",
+    icon: rewardsIcon,
+    title: "Flexible Rewards",
+    description:
+      "Support different user goals with clear options and an easy-to-scan experience.",
+    cName: "jackpot f3",
+  },
+];
 
-// eslint-disable-next-line no-unused-vars
-const JackpotsList =[
-    {
-        id:'1',
-        icon:f1,
-        title:'Automatic Payouts',
-        describtion:'Get your blood tests delivered at home collect a sample from the news your blood tests',
-        cName:'jackpot f1'
-    },
-    {
-        id:'2',
-        icon:f2,
-        title:'Network Effect',
-        describtion:'Get your blood tests delivered at home collect a sample from the news your blood tests',
-        cName:'jackpot f2 '
-    },
-    {
-        id:'3',
-        icon:f3,
-        title:'Bigger Rewards Methods',
-        describtion:'Get your blood tests delivered at home collect a sample from the news your blood tests',
-        cName:'jackpot f3'
-    },
-]
-
-export default JackpotsList
+export default jackpots;
